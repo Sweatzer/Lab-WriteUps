@@ -20,6 +20,16 @@ Technical writeups from HackTheBox labs and vulnerability assessment coursework.
 
 ---
 
+## Home Labs
+
+Hands-on lab environments built from scratch to simulate real-world attack and defense scenarios. These labs focus on building infrastructure, deploying security tooling, and executing end-to-end attack chains — all on isolated local networks.
+
+| Lab | Description | Tools & Tech |
+|-----|-------------|-------------|
+| [Lab 1 — Cybersecurity Detection & Attack Lab](Home%20Labs/Lab%201/cybersecurity-homelab-build.md) | Multi-VM environment with Wazuh SIEM, Suricata IDS, and DVWA for purple team exercises. Covers network architecture design in VirtualBox, dual-NIC pivot configuration, Suricata-to-Wazuh log integration, web app exploitation via command injection, UAC bypass with fodhelper.exe, and fileless PowerShell reverse shells. Includes full troubleshooting log for common VirtualBox networking and tooling issues. | VirtualBox, Wazuh, Suricata, DVWA, XAMPP, PowerShell, netcat |
+
+---
+
 ## Tools Referenced
 
 `nmap` · `netcat` · `whatweb` · `Wireshark` · `Burp Suite` · `PHP` · `Metasploit` · `pkexec` · `ssh-keygen` · `crackmapexec` · `smbclient` · `xfreerdp` · `onesixtyone` · `snmpwalk` · `mysql`

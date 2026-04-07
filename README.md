@@ -4,7 +4,7 @@ Technical writeups from HackTheBox labs and vulnerability assessment coursework.
 
 **Author:** Spencer Leach  
 **Certifications:** CompTIA Security+  
-**Focus Areas:** Network forensics, web exploitation, Linux privilege escalation, IDS/IPS evasion, session security, footprinting & enumeration
+**Focus Areas:** Network forensics, web exploitation, SQL injection, Linux privilege escalation, IDS/IPS evasion, session security, footprinting & enumeration
 
 ---
 
@@ -17,6 +17,8 @@ Technical writeups from HackTheBox labs and vulnerability assessment coursework.
 | [IDS/IPS and Firewall Evasion](Pentest%20Writeups/ids-ips-firewall-evasion/ids-ips-firewall-evasion.md) | Stealth scanning, source port spoofing, banner grabbing | CWE-200 |
 | [Session Security — XSS, Open Redirect, Session Hijacking](Pentest%20Writeups/session-security-css-hijacking/session-security-xss-hijacking.md) | Stored XSS, cookie theft, open redirect chaining, PCAP analysis | OWASP Top 10, CWE-79/601/614/319, MITRE T1539/T1040 |
 | [Network Traffic Analysis — DNS & ICMP Tunneling](Defensive%20Writeups/network-traffic-analysis-dns-icmp-tunneling.md) | Wireshark, DNS tunneling (iodine), ICMP tunneling (Stunnel), C2 detection | MITRE T1071/T1095 |
+| [Web Attacks — IDOR & XXE Exploitation](Pentest%20Writeups/web-attacks/web-attacks-idor-xxe/web-attacks-idor-xxe.md) | IDOR enumeration, API token harvesting, password reset abuse, XXE injection, Burp Suite | OWASP Top 10, CWE-639/611 |
+| [SQL Injection — Union-Based Extraction & Authentication Bypass](Pentest%20Writeups/web-attacks/sql-injection/sql-injection.md) | Boolean-based SQLi, UNION injection, INFORMATION_SCHEMA enumeration, password hash extraction, Burp Suite | OWASP Top 10, CWE-89, MITRE T1190 |
 
 ---
 
@@ -32,7 +34,7 @@ Hands-on lab environments built from scratch to simulate real-world attack and d
 
 ## Tools Referenced
 
-`nmap` · `netcat` · `whatweb` · `Wireshark` · `Burp Suite` · `PHP` · `Metasploit` · `pkexec` · `ssh-keygen` · `crackmapexec` · `smbclient` · `xfreerdp` · `onesixtyone` · `snmpwalk` · `mysql`
+`nmap` · `netcat` · `whatweb` · `Wireshark` · `Burp Suite` · `PHP` · `Metasploit` · `pkexec` · `ssh-keygen` · `crackmapexec` · `smbclient` · `xfreerdp` · `onesixtyone` · `snmpwalk` · `mysql` · `curl` · `hashcat`
 
 ---
 

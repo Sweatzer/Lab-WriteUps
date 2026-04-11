@@ -36,6 +36,7 @@ Technical writeups from HackTheBox labs, LetsDefend SOC investigations, and vuln
 |-----|--------|------------|
 | [SOC Alert: CVE-2024-24919 — Check Point Arbitrary File Read](Defensive-Writeups/SIEM-Analysis/CVE-2024-24919-Checkpoint-Arbitrary-File-Read.md) | Path traversal exploitation, SOC alert triage, VirusTotal/AbuseIPDB enrichment, firewall log analysis | MITRE T1190, CWE-22 |
 | [SOC338: Lumma Stealer via ClickFix Phishing](Defensive-Writeups/SIEM-Analysis/lumma-stealer-clickfix-phishing.md) | Phishing analysis, ClickFix social engineering, mshta.exe proxy execution, C2 detection, host containment | MITRE T1566.002/T1204.001/T1059.001/T1218.005/T1071.001 |
+| [SOC257: VPN Connection from Unauthorized Country](Defensive-Writeups/SIEM-Analysis/SOC257-VPN-Connection-Unauthorized-Country.md) | Unauthorized VPN access attempt, IP reputation analysis, MFA bypass failure, port scanning, credential compromise triage | MITRE T1595/T1133/T1621 |
 
 ### Network Analysis
 

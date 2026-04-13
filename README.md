@@ -4,7 +4,7 @@ Technical writeups from HackTheBox labs, LetsDefend SOC investigations, and vuln
 
 **Author:** Spencer Leach  
 **Certifications:** CompTIA Security+  
-**Focus Areas:** Network forensics, SIEM-based alert triage, web exploitation, SQL injection, Linux privilege escalation, IDS/IPS evasion, session security, footprinting & enumeration
+**Focus Areas:** Network forensics, SIEM-based alert triage, web exploitation, file upload bypass, SQL injection, Linux privilege escalation, IDS/IPS evasion, session security, footprinting & enumeration
 
 ---
 
@@ -17,6 +17,7 @@ Technical writeups from HackTheBox labs, LetsDefend SOC investigations, and vuln
 | [Session Security — XSS, Open Redirect, Session Hijacking](Pentest-Writeups/Web/session-security-xss-hijacking/session-security-xss-hijacking.md) | Stored XSS, cookie theft, open redirect chaining, PCAP analysis | OWASP Top 10, CWE-79/601/614/319, MITRE T1539/T1040 |
 | [Web Attacks — IDOR & XXE Exploitation](Pentest-Writeups/Web/idor-xxe/web-attacks-idor-xxe.md) | IDOR enumeration, API token harvesting, password reset abuse, XXE injection, Burp Suite | OWASP Top 10, CWE-639/611 |
 | [SQL Injection — Union-Based Extraction & Authentication Bypass](Pentest-Writeups/Web/sql-injection/sql-injection.md) | Boolean-based SQLi, UNION injection, INFORMATION_SCHEMA enumeration, password hash extraction, Burp Suite | OWASP Top 10, CWE-89, MITRE T1190 |
+| [File Upload Attacks — Multi-Layer Bypass to RCE](Pentest-Writeups/Web/file-upload-attacks/file-upload-attacks-skills-assessment.md) | Extension blacklist/whitelist bypass, Content-Type fuzzing, MIME type spoofing, magic byte injection, XXE via SVG for source code exfiltration, PHP web shell deployment | OWASP 2025 A02/A05/A06, CWE-434/611, MITRE T1190/T1505.003/T1036.008, NIST 800-53 SI-10/CM-6/CM-7, CISA Web Shell CSI |
 
 ### Infrastructure
 
@@ -58,7 +59,7 @@ Hands-on lab environments built from scratch to simulate real-world attack and d
 
 ## Tools Referenced
 
-`nmap` · `netcat` · `whatweb` · `Wireshark` · `Burp Suite` · `PHP` · `Metasploit` · `pkexec` · `ssh-keygen` · `crackmapexec` · `smbclient` · `xfreerdp` · `onesixtyone` · `snmpwalk` · `mysql` · `curl` · `hashcat` · `mshta.exe` · `PowerShell`
+`nmap` · `netcat` · `whatweb` · `Wireshark` · `Burp Suite` · `PHP` · `Metasploit` · `pkexec` · `ssh-keygen` · `crackmapexec` · `smbclient` · `xfreerdp` · `onesixtyone` · `snmpwalk` · `mysql` · `curl` · `hashcat` · `mshta.exe` · `PowerShell` · `ffuf` · `printf`
 
 ---
 

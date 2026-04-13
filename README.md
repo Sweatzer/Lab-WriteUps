@@ -4,7 +4,7 @@ Technical writeups from HackTheBox labs, LetsDefend SOC investigations, and vuln
 
 **Author:** Spencer Leach  
 **Certifications:** CompTIA Security+  
-**Focus Areas:** Network forensics, SIEM-based alert triage, web exploitation, file upload bypass, SQL injection, Linux privilege escalation, IDS/IPS evasion, session security, footprinting & enumeration
+**Focus Areas:** Network forensics, SIEM-based alert triage, web exploitation, file upload bypass, SQL injection, Linux privilege escalation, IDS/IPS evasion, session security, footprinting & enumeration, Wi-Fi penetration testing
 
 ---
 
@@ -26,6 +26,7 @@ Technical writeups from HackTheBox labs, LetsDefend SOC investigations, and vuln
 | [Footprinting — HTB Academy Skills Assessment](Pentest-Writeups/Infrastructure/recon-and-enumeration/footprinting/footprinting.md) | FTP, SSH, NFS, SMB, SNMP, RDP, MySQL service chaining, credential harvesting, lateral movement | MITRE T1046/T1078/T1021/T1552/T1039 |
 | [Linux Privilege Escalation — PwnKit (CVE-2021-4034)](Pentest-Writeups/Infrastructure/privilege-escalation/linux-privesc/Linux-PrivEsc-PwnKit-Skills-Assessment.md) | SUID enumeration, PolicyKit exploitation, SSH key persistence, post-exploitation analysis | MITRE T1548.001/T1098.004, CWE-787 |
 | [IDS/IPS and Firewall Evasion](Pentest-Writeups/Infrastructure/evasion/ids-ips-firewall-evasion/ids-ips-firewall-evasion.md) | Stealth scanning, source port spoofing, banner grabbing | CWE-200 |
+| [Wi-Fi MAC Filtering Bypass](Pentest-Writeups/Infrastructure/wifi-pentesting/wifi-mac-bypass-writeup.md) | WPA2 handshake capture, deauthentication attacks, offline password cracking, MAC address spoofing, dual-band exploitation | MITRE T1669/T1016.002/T1110.002/T1036/T1498, NIST SP 800-97/800-153 |
 
 ---
 
@@ -59,7 +60,7 @@ Hands-on lab environments built from scratch to simulate real-world attack and d
 
 ## Tools Referenced
 
-`nmap` · `netcat` · `whatweb` · `Wireshark` · `Burp Suite` · `PHP` · `Metasploit` · `pkexec` · `ssh-keygen` · `crackmapexec` · `smbclient` · `xfreerdp` · `onesixtyone` · `snmpwalk` · `mysql` · `curl` · `hashcat` · `mshta.exe` · `PowerShell` · `ffuf` · `printf`
+`nmap` · `netcat` · `whatweb` · `Wireshark` · `Burp Suite` · `PHP` · `Metasploit` · `pkexec` · `ssh-keygen` · `crackmapexec` · `smbclient` · `xfreerdp` · `onesixtyone` · `snmpwalk` · `mysql` · `curl` · `hashcat` · `mshta.exe` · `PowerShell` · `ffuf` · `printf` · `airmon-ng` · `airodump-ng` · `aireplay-ng` · `aircrack-ng` · `macchanger` · `wpa_supplicant`
 
 ---
 

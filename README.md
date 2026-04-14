@@ -58,6 +58,16 @@ Hands-on lab environments built from scratch to simulate real-world attack and d
 
 ---
 
+## Real-Life Engagements
+
+Security findings from real-world responsible disclosure engagements. All reports are based on publicly visible client-side source code only — no exploitation or unauthorized access was performed. Identifying details have been sanitized to protect client identity.
+
+| Report | Topics | Frameworks |
+|--------|--------|------------|
+| [ASP.NET WebForms File Upload Module — Client-Side Source Review](real-life-engagements/security_findings.md) | Broken CAPTCHA, hardcoded identifiers, client-side-only validation, path traversal, DOM-based XSS, cross-window manipulation, ViewState tampering, CSRF | OWASP Top 10 A01/A03/A04/A05, CWE-352/22/79/434/611, MITRE T1190 |
+
+---
+
 ## Tools Referenced
 
 `nmap` · `netcat` · `whatweb` · `Wireshark` · `Burp Suite` · `PHP` · `Metasploit` · `pkexec` · `ssh-keygen` · `crackmapexec` · `smbclient` · `xfreerdp` · `onesixtyone` · `snmpwalk` · `mysql` · `curl` · `hashcat` · `mshta.exe` · `PowerShell` · `ffuf` · `printf` · `airmon-ng` · `airodump-ng` · `aireplay-ng` · `aircrack-ng` · `macchanger` · `wpa_supplicant`

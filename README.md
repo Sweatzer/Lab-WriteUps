@@ -75,12 +75,13 @@ Independent research and analysis on offensive security concepts, infrastructure
 | Topic | Description | Key Concepts |
 |-------|-------------|--------------|
 | [Solo Operator Red Team Infrastructure](personal-research/solo-red-team-infrastructure.md) | Practical guide to building autonomous, disposable attack infrastructure for solo pentesters — from Proxmox home lab to cloud-deployed operations | WireGuard tunnels, Terraform/Ansible IaC, VPS redirectors, C2 architecture, OPSEC, functional compartmentalization |
+| [Building Your Own VPS — Self-Hosted Virtualization](personal-research/diy-vps-own-infrastructure.md) | Practical guide to replacing commercial VPS subscriptions with self-hosted Proxmox infrastructure on personal hardware — covering hardware selection, VM provisioning, Cloudflare Tunnel exposure, hardening, and cost analysis | Proxmox VE, KVM, LXC, ZFS, Cloudflare Tunnel, WireGuard, reverse proxy, NVMe storage |
 
 ---
 
 ## Tools Referenced
 
-`nmap` · `netcat` · `whatweb` · `Wireshark` · `Burp Suite` · `PHP` · `Metasploit` · `pkexec` · `ssh-keygen` · `crackmapexec` · `smbclient` · `xfreerdp` · `onesixtyone` · `snmpwalk` · `mysql` · `curl` · `hashcat` · `mshta.exe` · `PowerShell` · `ffuf` · `printf` · `airmon-ng` · `airodump-ng` · `aireplay-ng` · `aircrack-ng` · `macchanger` · `wpa_supplicant` · `Terraform` · `Ansible` · `WireGuard` · `Proxmox` · `Chisel` · `Ligolo-ng`
+`nmap` · `netcat` · `whatweb` · `Wireshark` · `Burp Suite` · `PHP` · `Metasploit` · `pkexec` · `ssh-keygen` · `crackmapexec` · `smbclient` · `xfreerdp` · `onesixtyone` · `snmpwalk` · `mysql` · `curl` · `hashcat` · `mshta.exe` · `PowerShell` · `ffuf` · `printf` · `airmon-ng` · `airodump-ng` · `aireplay-ng` · `aircrack-ng` · `macchanger` · `wpa_supplicant` · `Terraform` · `Ansible` · `WireGuard` · `Proxmox` · `Chisel` · `Ligolo-ng` · `cloudflared` · `Traefik` · `Nginx Proxy Manager` · `Tailscale`
 
 ---
 

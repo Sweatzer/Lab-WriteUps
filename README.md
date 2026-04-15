@@ -4,7 +4,7 @@ Technical writeups from HackTheBox labs, LetsDefend SOC investigations, and vuln
 
 **Author:** Spencer Leach  
 **Certifications:** CompTIA Security+  
-**Focus Areas:** Network forensics, SIEM-based alert triage, web exploitation, file upload bypass, SQL injection, Linux privilege escalation, IDS/IPS evasion, session security, footprinting & enumeration, Wi-Fi penetration testing
+**Focus Areas:** Network forensics, SIEM-based alert triage, web exploitation, file upload bypass, SQL injection, Linux privilege escalation, IDS/IPS evasion, session security, footprinting & enumeration, Wi-Fi penetration testing, red team infrastructure & automation
 
 ---
 
@@ -68,9 +68,19 @@ Security findings from real-world responsible disclosure engagements. All report
 
 ---
 
+## Personal Research
+
+Independent research and analysis on offensive security concepts, infrastructure design, and operational tradecraft — compiled from industry sources, practitioner blogs, and hands-on experimentation.
+
+| Topic | Description | Key Concepts |
+|-------|-------------|--------------|
+| [Solo Operator Red Team Infrastructure](personal-research/solo-red-team-infrastructure.md) | Practical guide to building autonomous, disposable attack infrastructure for solo pentesters — from Proxmox home lab to cloud-deployed operations | WireGuard tunnels, Terraform/Ansible IaC, VPS redirectors, C2 architecture, OPSEC, functional compartmentalization |
+
+---
+
 ## Tools Referenced
 
-`nmap` · `netcat` · `whatweb` · `Wireshark` · `Burp Suite` · `PHP` · `Metasploit` · `pkexec` · `ssh-keygen` · `crackmapexec` · `smbclient` · `xfreerdp` · `onesixtyone` · `snmpwalk` · `mysql` · `curl` · `hashcat` · `mshta.exe` · `PowerShell` · `ffuf` · `printf` · `airmon-ng` · `airodump-ng` · `aireplay-ng` · `aircrack-ng` · `macchanger` · `wpa_supplicant`
+`nmap` · `netcat` · `whatweb` · `Wireshark` · `Burp Suite` · `PHP` · `Metasploit` · `pkexec` · `ssh-keygen` · `crackmapexec` · `smbclient` · `xfreerdp` · `onesixtyone` · `snmpwalk` · `mysql` · `curl` · `hashcat` · `mshta.exe` · `PowerShell` · `ffuf` · `printf` · `airmon-ng` · `airodump-ng` · `aireplay-ng` · `aircrack-ng` · `macchanger` · `wpa_supplicant` · `Terraform` · `Ansible` · `WireGuard` · `Proxmox` · `Chisel` · `Ligolo-ng`
 
 ---
 

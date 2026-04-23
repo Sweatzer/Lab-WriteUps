@@ -28,6 +28,12 @@ Technical writeups from SOC triage alerts, detection engineering labs, pentest c
 | [SOC338](https://github.com/Sweatzer/Lab-WriteUps/blob/main/Defensive-Writeups/SIEM-Analysis/lumma-stealer-clickfix-phishing.md) | Lumma Stealer via ClickFix Phishing | Phishing → ClickFix social engineering → PowerShell → `mshta.exe` → C2 callback, email/sandbox/network correlation, host isolation | MITRE T1566.002 / T1204.001 / T1059.001 / T1218.005 / T1071.001 |
 | [Detection Engineering Lab](https://github.com/Sweatzer/Lab-WriteUps/blob/main/Defensive-Writeups/SIEM-Analysis/siem-use-case-development-splunk-elk.md) | Splunk & ELK Use Case Development | 8 end-to-end detections: brute force (4624/4625 correlation), SQLi, XSS, Snort scan detection, insecure port monitoring, PowerShell LotL, Mimikatz LSASS access (0x1010), Sysmon+VT hash pivot | MITRE T1110 / T1190 / T1595 / T1046 / T1059.001 / T1003.001 / T1105 |
 
+### DFIR — HTB Sherlocks
+
+| Sherlock | Scenario | Artifacts | Frameworks |
+|---|---|---|---|
+| [Brutus](https://github.com/Sweatzer/Lab-WriteUps/blob/main/Defensive-Writeups/DFIR-Sherlocks/brutus/brutus.md) | Linux SSH brute-force → interactive root compromise → backdoor account persistence (`cyberjunkie` added to sudo) → `/etc/shadow` dump → `linper` persistence toolkit download | `/var/log/auth.log`, `/var/log/wtmp` (parsed via Python utmp parser) | MITRE T1110.001 / T1078.003 / T1136.001 / T1098 / T1003.008 / T1105 |
+
 ### Network Forensics
 
 | Lab | Topics | Frameworks |
@@ -47,6 +53,13 @@ Hands-on lab environments built from scratch to simulate real-world attack and d
 ---
 
 ## Pentest Writeups
+
+### HTB Machines — End-to-End CTFs
+
+| Machine | Difficulty / OS | Attack Chain | Frameworks |
+|---|---|---|---|
+| [Optimum](https://github.com/Sweatzer/Lab-WriteUps/blob/main/Pentest-Writeups/HTB-Machines/optimum/optimum.md) | Easy / Windows Server 2012 R2 | HFS 2.3 RCE → x86 Meterpreter as `kostas` → autologon registry creds (WOW64 redirection bypass) → `local_exploit_suggester` → `ms16_032` → `NT AUTHORITY\SYSTEM` | MITRE T1190 / T1552.002 / T1068 / T1134, CVE-2014-6287, CVE-2016-0099 |
+| [Cap](https://github.com/Sweatzer/Lab-WriteUps/blob/main/Pentest-Writeups/HTB-Machines/cap/cap.md) | Easy / Linux | IDOR on `/data/<id>` → `.pcap` with cleartext FTP creds → SSH as `nathan` → `getcap` enumeration → `cap_setuid` on `/usr/bin/python3.8` → root | MITRE T1190 / T1552.001 / T1040 / T1021.004 / T1548.001 |
 
 ### Recon & Enumeration
 

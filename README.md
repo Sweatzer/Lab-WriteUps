@@ -67,6 +67,12 @@ Hands-on lab environments built from scratch to simulate real-world attack and d
 |---|---|---|
 | [Footprinting — HTB Academy Skills Assessment](https://github.com/Sweatzer/Lab-WriteUps/blob/main/Pentest-Writeups/Infrastructure/recon-and-enumeration/footprinting/footprinting.md) | FTP, SSH, NFS, SMB, SNMP, RDP, MySQL service chaining, credential harvesting, lateral movement | MITRE T1046 / T1078 / T1021 / T1552 / T1039 |
 
+### Active Directory
+
+| Lab | Topics | Frameworks |
+|---|---|---|
+| [AD Enumeration & Attacks — HTB Academy Skills Assessment II](https://github.com/Sweatzer/Lab-WriteUps/blob/main/Pentest-Writeups/Infrastructure/active-directory/ad-enumeration-attacks-skills-assessment-ii/ad-enumeration-attacks-skills-assessment-ii.md) | LLMNR poisoning, NTLMv2 cracking, password spraying, SMB share spelunking, MSSQL `xp_cmdshell` + `SeImpersonate` → SYSTEM, LSA `DefaultPassword` reuse, `GenericAll` on Domain Admins, internal Inveigh hash capture, DCSync, pass-the-hash to DC | MITRE T1557.001 / T1110.002 / T1110.003 / T1135 / T1552.001 / T1059.005 / T1134.001 / T1003.004 / T1484 / T1003.006 / T1550.002 |
+
 ### Web Exploitation
 
 | Lab | Topics | Frameworks |
@@ -102,7 +108,7 @@ Self-directed writeups exploring infrastructure and operator topics outside stru
 
 ## Tools Referenced
 
-`nmap` · `netcat` · `whatweb` · `Wireshark` · `Burp Suite` · `Splunk` · `ELK Stack` · `Sysmon` · `Winlogbeat` · `Wazuh` · `Suricata` · `Snort` · `Hydra` · `Mimikatz` · `PowerShell` · `Metasploit` · `pkexec` · `ssh-keygen` · `crackmapexec` · `smbclient` · `xfreerdp` · `onesixtyone` · `snmpwalk` · `mysql` · `curl` · `hashcat` · `Proxmox VE` · `Terraform` · `Ansible`
+`nmap` · `netcat` · `whatweb` · `Wireshark` · `Burp Suite` · `Splunk` · `ELK Stack` · `Sysmon` · `Winlogbeat` · `Wazuh` · `Suricata` · `Snort` · `Hydra` · `Mimikatz` · `PowerShell` · `Metasploit` · `pkexec` · `ssh-keygen` · `crackmapexec` · `smbclient` · `xfreerdp` · `onesixtyone` · `snmpwalk` · `mysql` · `curl` · `hashcat` · `Proxmox VE` · `Terraform` · `Ansible` · `Responder` · `Inveigh` · `Impacket` (`secretsdump`, `psexec`, `mssqlclient`) · `fping`
 
 ---
 

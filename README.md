@@ -80,6 +80,7 @@ Hands-on lab environments built from scratch to simulate real-world attack and d
 | [Session Security — XSS, Open Redirect, Session Hijacking](https://github.com/Sweatzer/Lab-WriteUps/blob/main/Pentest-Writeups/Web/session-security-xss-hijacking/session-security-xss-hijacking.md) | Stored XSS, cookie theft, open redirect chaining, PCAP analysis | OWASP Top 10, CWE-79/601/614/319, MITRE T1539/T1040 |
 | [Web Attacks — IDOR & XXE Exploitation](https://github.com/Sweatzer/Lab-WriteUps/blob/main/Pentest-Writeups/Web/idor-xxe/web-attacks-idor-xxe.md) | IDOR enumeration, API token harvesting, password reset abuse, XXE injection, Burp Suite | OWASP Top 10, CWE-639/611 |
 | [SQL Injection — Union-Based Extraction & Authentication Bypass](https://github.com/Sweatzer/Lab-WriteUps/blob/main/Pentest-Writeups/Web/sql-injection/sql-injection.md) | Boolean-based SQLi, UNION injection, INFORMATION_SCHEMA enumeration, password hash extraction, Burp Suite | OWASP Top 10, CWE-89, MITRE T1190 |
+| [Common Web Applications — HTB Academy Skills Assessments I/II/III](https://github.com/Sweatzer/Lab-WriteUps/blob/main/Pentest-Writeups/Web/common-applications/common-web-applications-enum-exploit.md) | Apache Tomcat CGIServlet RCE, CGI directory fuzzing, Metasploit `ForceExploit` workflow, GitLab public-repo information disclosure, hardcoded DB creds in source control, Nagios XI authenticated RCE, .NET DLL decompilation with dnSpy, hardcoded credentials in compiled assemblies | MITRE T1190 / T1078 / T1552.001 / T1213.003 / T1059.003 / T1518, NIST SP 800-53 (SI-2, IA-5(7), CM-7, SC-28, SA-15), ISO/IEC 27001:2022 (A.5.17, A.8.8, A.8.25, A.8.28), CVE-2019-0232 / CVE-2020-35578 |
 
 ### Privilege Escalation
 
@@ -108,7 +109,7 @@ Self-directed writeups exploring infrastructure and operator topics outside stru
 
 ## Tools Referenced
 
-`nmap` · `netcat` · `whatweb` · `Wireshark` · `Burp Suite` · `Splunk` · `ELK Stack` · `Sysmon` · `Winlogbeat` · `Wazuh` · `Suricata` · `Snort` · `Hydra` · `Mimikatz` · `PowerShell` · `Metasploit` · `pkexec` · `ssh-keygen` · `crackmapexec` · `smbclient` · `xfreerdp` · `onesixtyone` · `snmpwalk` · `mysql` · `curl` · `hashcat` · `Proxmox VE` · `Terraform` · `Ansible` · `Responder` · `Inveigh` · `Impacket` (`secretsdump`, `psexec`, `mssqlclient`) · `fping`
+`nmap` · `netcat` · `whatweb` · `Wireshark` · `Burp Suite` · `Splunk` · `ELK Stack` · `Sysmon` · `Winlogbeat` · `Wazuh` · `Suricata` · `Snort` · `Hydra` · `Mimikatz` · `PowerShell` · `Metasploit` · `pkexec` · `ssh-keygen` · `crackmapexec` · `smbclient` · `xfreerdp` · `onesixtyone` · `snmpwalk` · `mysql` · `curl` · `hashcat` · `Proxmox VE` · `Terraform` · `Ansible` · `Responder` · `Inveigh` · `Impacket` (`secretsdump`, `psexec`, `mssqlclient`) · `fping` · `dnSpy`
 
 ---
 

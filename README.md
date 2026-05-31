@@ -9,6 +9,19 @@ Technical writeups from SOC triage alerts, detection engineering labs, pentest c
 
 ---
 
+## ⭐ Featured Work — Full Enterprise Compromise + GRC Assessment
+
+> **Start here.** The most comprehensive piece in this repo: a complete external-to-domain-admin kill chain across a 3-subnet, 7-host enterprise network — paired with a professional-grade governance assessment that scores, remediates, and root-causes every finding. Two documents, two audiences: the operator's reproducible attack chain *and* the CISO-ready report built on current industry frameworks.
+
+**📂 [00-Featured-Enterprise-Assessment →](https://github.com/Sweatzer/Lab-WriteUps/tree/main/00-Featured-Enterprise-Assessment)**
+
+| Document | Highlights |
+|---|---|
+| **[Technical Writeup](https://github.com/Sweatzer/Lab-WriteUps/blob/main/00-Featured-Enterprise-Assessment/INLANEFREIGHT_Lab_Writeup.md)** | 1 unauthenticated host → full domain compromise → management-subnet root, no zero-days. **8 web bug classes** (IDOR/upload/LFI/SQLi/XSS/SSRF/XXE/cmd injection), DotNetNuke→`xp_cmdshell`, `SeImpersonate`→SYSTEM, a **3-link AD ACL chain → DCSync** (krbtgt + Administrator), double pivot via dual-homed DC, PwnKit. **11 of 14 ATT&CK tactics.** |
+| **[GRC Assessment Report](https://github.com/Sweatzer/Lab-WriteUps/blob/main/00-Featured-Enterprise-Assessment/INLANEFREIGHT_GRC_Assessment_Report.md)** | 28-finding **CVSS v4.0** register, **OWASP Top 10:2025** classification, remediation cross-walked to **NIST 800-53 / CIS v8.1 / ISO 27001:2022 / 800-171 / CMMC**, a **NIST CSF 2.0** governance gap analysis, and 7 finding-driven SOPs. |
+
+---
+
 ## Real-World Security Work
 
 | Engagement | Scope | Findings |

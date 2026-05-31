@@ -19,8 +19,6 @@
 | **Version / Date**        | 1.0 — *5/30/2026*                                                                                          |
 | **Author**                | *Spencer Leach*                                                                                            |
 
-> **Note on terminology — "SAP":** This report interprets **SAP as *Standard Administrative/Operating Procedure*** (the operational-procedure sense), delivered in [Section 8](#8-updated-standard-operating-procedures-saps).
-
 ---
 
 ## Table of Contents
@@ -32,7 +30,7 @@
 5. [Detailed Findings](#5-detailed-findings)
 6. [Remediation Recommendations (Framework-Sourced)](#6-remediation-recommendations-framework-sourced)
 7. [GRC Gap Analysis — What Went Wrong on the Governance Side](#7-grc-gap-analysis--what-went-wrong-on-the-governance-side)
-8. [Updated Standard Operating Procedures (SAPs)](#8-updated-standard-operating-procedures-saps)
+8. [Updated Standard Operating Procedures (SOPs)](#8-updated-standard-operating-procedures-sops)
 9. [References](#9-references)
 10. [Appendix A — Control Crosswalk](#appendix-a--control-crosswalk)
 
@@ -283,18 +281,18 @@ If INLANEFREIGHT processes federal CUI, the above gaps are not merely best-pract
 
 ---
 
-## 8. Updated Standard Operating Procedures (SAPs)
+## 8. Updated Standard Operating Procedures (SOPs)
 
 >These are concrete, finding-driven procedures the organization should adopt and assign owners to. Each cites the findings it closes and the governing control(s).
 
-### SAP-01 — Secrets & Credential Management Procedure
+### SOP-01 — Secrets & Credential Management Procedure
 **Closes:** F-13, F-18, F-19, F-20, F-21, F-22, F-23 · **Controls:** IA-5(7), AC-2, CIS 5, ISO A.8.5
 1. No credential may be stored in cleartext in source, config files, scripts, unattend files, fileshares, or logs. All secrets live in an approved vault; applications retrieve at runtime.
 2. Disable AutoLogon enterprise-wide; where unattended provisioning is required, inject secrets at deploy time and **delete `unattend.xml`/`sysprep` artifacts** as a post-build step.
 3. Service accounts use 25+ char random passwords or **gMSA**; rotate on a defined cadence and on personnel change.
 4. Quarterly automated sweep for secrets-in-files (e.g., secret-scanning across shares, SYSVOL/NETLOGON, build artifacts); remediate within SLA.
 
-### SAP-02 — Privileged Access & AD Entitlement Review Procedure
+### SOP-02 — Privileged Access & AD Entitlement Review Procedure
 **Closes:** F-14, F-16, F-17, F-24, F-25, F-26 · **Controls:** AC-6, AC-5, AC-2(7), CIS 6, ISO A.8.2
 1. **Monthly** ACL review using BloodHound/PingCastle; any `GenericAll`/`GenericWrite`/`WriteDACL`/`WriteOwner` on groups or Tier-0 objects requires documented justification or removal.
 2. Replication rights (`DS-Replication-Get-Changes*`) restricted to domain controllers; alert on any other principal holding them.
@@ -302,31 +300,31 @@ If INLANEFREIGHT processes federal CUI, the above gaps are not merely best-pract
 4. Remove `SeImpersonate`/`SeAssignPrimaryToken` from contexts that don't require it; deploy Windows LAPS to all member servers/workstations [18].
 5. DB engines run under least-privilege accounts; `xp_cmdshell` disabled and change-controlled.
 
-### SAP-03 — System Hardening & Configuration Baseline Procedure
+### SOP-03 — System Hardening & Configuration Baseline Procedure
 **Closes:** F-02, F-03, F-05, F-10, F-15 · **Controls:** CM-2, CM-6, CM-7, CIS 4, ISO A.8.9
 1. All systems built from a documented baseline (CIS Benchmark / DISA STIG); deviations are change-controlled exceptions with expiry.
 2. Standard "deny by default" service posture: no anonymous FTP, no unrestricted DNS AXFR, NFS exports host-scoped (never `everyone`), web servers limited to required HTTP methods, application self-registration off by default.
 3. New-build checklist signed off before a host enters production; drift detection runs continuously.
 
-### SAP-04 — Secure Development & Web Application Validation Procedure
+### SOP-04 — Secure Development & Web Application Validation Procedure
 **Closes:** F-04, F-05, F-06, F-07, F-08, F-09, F-11, F-12 · **Controls:** SI-10, SA-11/15, CIS 16, ISO A.8.28
 1. All input validated by **allowlist**; all DB access **parameterized**; XML parsers configured with external entities **disabled**; server-side fetches restricted to a destination **allowlist**.
 2. Authorization enforced **server-side, per object** (no trust in client-supplied IDs or headers); output encoding + CSP mandatory.
 3. SAST/DAST in CI; pre-release testing against **OWASP ASVS** and the **OWASP Top 10:2025** categories; no release with open High/Critical web findings.
 
-### SAP-05 — Vulnerability & Patch Management Procedure
+### SOP-05 — Vulnerability & Patch Management Procedure
 **Closes:** F-06, F-27 · **Controls:** SI-2, RA-5, CIS 7, ISO A.8.8
 1. Authenticated vulnerability scans on a fixed cadence; results triaged by risk.
 2. Remediation SLAs: **CISA KEV** items and Critical → expedited (e.g., 72 h / 7 days); High → 30 days; Medium → 90 days.
 3. Third-party/plugin components tracked in an SBOM and patched as part of the supply-chain program (OWASP A03:2025 / CSF GV.SC).
 
-### SAP-06 — Logging, Monitoring & Detection Procedure
+### SOP-06 — Logging, Monitoring & Detection Procedure
 **Closes:** F-13, F-25, F-28 · **Controls:** AU-2/6/9, SI-4, CIS 8 & 13, ISO A.8.15/16
 1. All hosts ship logs to a central SIEM with tamper-resistant retention; audit logs must never contain cleartext secrets.
 2. Maintain a detection library mapped to MITRE ATT&CK; minimum coverage for: DCSync (replication from non-DC), Kerberoasting (4769 anomalies / weak-cipher TGS requests), mass password resets and privileged group changes, AV/EDR tamper, and new local-admin creation.
 3. Detection content is tested against red-team/pentest activity; gaps feed back into engineering each cycle.
 
-### SAP-07 — Incident Response & AD Recovery Procedure
+### SOP-07 — Incident Response & AD Recovery Procedure
 **Closes:** RS/RC gaps · **Controls:** IR-4/8, CIS 17, ISO A.5.24–A.5.30
 1. Maintain IR runbooks including a **`krbtgt` double-reset** procedure and AD forest-recovery plan for confirmed domain compromise.
 2. Define segmentation/containment steps for cross-subnet pivot scenarios (isolate dual-homed hosts; revoke pivot routes).

@@ -156,7 +156,7 @@ Scores below are **CVSS v4.0 Base-metric assessments** with vector strings shown
 | **F-27** | Missing patch — **PwnKit, CVE-2021-4034** (KEV-listed)                              | mngt01           | NVD v3.1: `AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H`          | 7.8   | High [13][14]     |
 | **F-28** | Insufficient logging & alerting (loud actions undetected)                           | enterprise       | `AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N` | 6.9   | Medium            |
 
-\* **Caveat** - Many of these findings are particularly high mostly because of the nature of this being a lab environment. This means from a security perspective this network was essentially close to worst case scenario when as far as there being any sort of defensive framework in place that even small networks would implement by law. Also there is no metrics available for recovery, urgency, or other variables that might improve the criticality ratings. 
+\* **Caveat on the severity distribution.** The register skews heavily toward High and Critical, which is largely a function of the environment. This is a lab built expressly to chain one vulnerability into the next, so most findings are individually severe by design — and the network reflects a near worst-case posture, lacking even the baseline defensive controls a small organization would typically be expected (and in many sectors required) to have. The scores are also Base-metric only: contextual variables such as exploit/threat maturity, asset criticality, and recovery factors were not available to model, and in a real engagement those would refine — and in several cases lower — the final ratings.
 
 ---
 

@@ -62,6 +62,7 @@ Hands-on lab environments built from scratch to simulate real-world attack and d
 | Lab | Description | Tools & Tech |
 |---|---|---|
 | [Lab 1 — Cybersecurity Detection & Attack Lab](https://github.com/Sweatzer/Lab-WriteUps/blob/main/Home-Labs/Lab-1/cybersecurity-homelab-build.md) | Multi-VM environment with Wazuh SIEM, Suricata IDS, and DVWA for purple team exercises. Network architecture design in VirtualBox, dual-NIC pivot configuration, Suricata-to-Wazuh log integration, web app exploitation via command injection, UAC bypass with `fodhelper.exe`, and fileless PowerShell reverse shells. Includes full troubleshooting log. | VirtualBox, Wazuh, Suricata, DVWA, XAMPP, PowerShell, netcat |
+| [Lab 2 — Remote Access & Network Foundations](https://github.com/Sweatzer/Lab-WriteUps/blob/main/Home-Labs/Lab-2/homelab-remote-access-foundations.md) | Building secure remote reach into a physical home lab behind double-NAT — without opening a single inbound port. Outbound-only mesh VPN (Tailscale) as the perimeter on an OpenWrt router, OpenVPN evaluated and ruled out on connection-model grounds, SMB file sharing reachable over the tunnel (with a Microsoft-account-vs-local-account auth root-cause dive), key-only SSH hardening on a USB-pivot-reflashed Kali Pi, and remote Wake-on-LAN tooling. Threat-model-driven design throughout. | OpenWrt (GL.iNet MT3000), Tailscale, SMB/Windows file sharing, `etherwake` (Wake-on-LAN), Kali Linux, Raspberry Pi, SSH key auth, `fstab` |
 
 ---
 
@@ -124,7 +125,7 @@ Self-directed writeups exploring infrastructure and operator topics outside stru
 
 ## Tools Referenced
 
-`nmap` · `netcat` · `whatweb` · `Wireshark` · `Burp Suite` · `Splunk` · `ELK Stack` · `Sysmon` · `Winlogbeat` · `Wazuh` · `Suricata` · `Snort` · `Hydra` · `Mimikatz` · `PowerShell` · `Metasploit` · `pkexec` · `ssh-keygen` · `crackmapexec` · `smbclient` · `xfreerdp` · `onesixtyone` · `snmpwalk` · `mysql` · `curl` · `hashcat` · `Proxmox VE` · `Terraform` · `Ansible` · `Responder` · `Inveigh` · `Impacket` (`secretsdump`, `psexec`, `mssqlclient`) · `fping` · `dnSpy` · `enum4linux-ng` · `smbmap` · `rpcclient` · `rclone` · `evil-winrm`
+`nmap` · `netcat` · `whatweb` · `Wireshark` · `Burp Suite` · `Splunk` · `ELK Stack` · `Sysmon` · `Winlogbeat` · `Wazuh` · `Suricata` · `Snort` · `Hydra` · `Mimikatz` · `PowerShell` · `Metasploit` · `pkexec` · `ssh-keygen` · `crackmapexec` · `smbclient` · `xfreerdp` · `onesixtyone` · `snmpwalk` · `mysql` · `curl` · `hashcat` · `Proxmox VE` · `Terraform` · `Ansible` · `Responder` · `Inveigh` · `Impacket` (`secretsdump`, `psexec`, `mssqlclient`) · `fping` · `dnSpy` · `enum4linux-ng` · `smbmap` · `rpcclient` · `rclone` · `evil-winrm` · `Tailscale` · `OpenWrt` · `etherwake`
 
 ---
 

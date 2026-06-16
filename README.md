@@ -73,6 +73,8 @@ Hands-on lab environments built from scratch to simulate real-world attack and d
 |---|---|---|---|
 | [Optimum](https://github.com/Sweatzer/Lab-WriteUps/blob/main/Pentest-Writeups/HTB-Machines/optimum/optimum.md) | Easy / Windows Server 2012 R2 | HFS 2.3 RCE → x86 Meterpreter as `kostas` → autologon registry creds (WOW64 redirection bypass) → `local_exploit_suggester` → `ms16_032` → `NT AUTHORITY\SYSTEM` | MITRE T1190 / T1552.002 / T1068 / T1134, CVE-2014-6287, CVE-2016-0099 |
 | [Cap](https://github.com/Sweatzer/Lab-WriteUps/blob/main/Pentest-Writeups/HTB-Machines/cap/cap.md) | Easy / Linux | IDOR on `/data/<id>` → `.pcap` with cleartext FTP creds → SSH as `nathan` → `getcap` enumeration → `cap_setuid` on `/usr/bin/python3.8` → root | MITRE T1190 / T1552.001 / T1040 / T1021.004 / T1548.001 |
+| [Trick](https://github.com/Sweatzer/Lab-WriteUps/blob/main/Pentest-Writeups/HTB-Machines/trick/trick.md) | Easy / Linux | DNS zone transfer → vhost discovery → SQLi auth bypass in payroll app (CVE-2021-44088) → LFI arbitrary file read → SSH key recovery as `michael` → `sudo` + insecure permissions on Fail2ban config → root. Full client-style report: 7 findings, severity ratings, RoE, remediation | PTES / OWASP, MITRE CWE-89 / 98 / 22 / 552 / 732 / 269 / 250, CVE-2021-44088 |
+| [Abducted](https://github.com/Sweatzer/Lab-WriteUps/blob/main/Pentest-Writeups/HTB-Machines/abducted/abducted.md) | Medium / Linux | Anonymous RPC user/policy leak → unauthenticated Samba RCE → `rclone.conf` reversibly-obfuscated creds → credential reuse to SSH as `scott` → Samba `force user` + `wide links` symlink write → SSH key as `marcus` → `operators`-writable systemd drop-in → root | MITRE T1190 / T1078 / T1552.001 / T1110.003 / T1135 / T1087 / T1543.002 / T1098.004 / T1548, CWE-306 / 78 / 59 / 732 / 276 / 522 |
 
 ### Recon & Enumeration
 
@@ -122,7 +124,7 @@ Self-directed writeups exploring infrastructure and operator topics outside stru
 
 ## Tools Referenced
 
-`nmap` · `netcat` · `whatweb` · `Wireshark` · `Burp Suite` · `Splunk` · `ELK Stack` · `Sysmon` · `Winlogbeat` · `Wazuh` · `Suricata` · `Snort` · `Hydra` · `Mimikatz` · `PowerShell` · `Metasploit` · `pkexec` · `ssh-keygen` · `crackmapexec` · `smbclient` · `xfreerdp` · `onesixtyone` · `snmpwalk` · `mysql` · `curl` · `hashcat` · `Proxmox VE` · `Terraform` · `Ansible` · `Responder` · `Inveigh` · `Impacket` (`secretsdump`, `psexec`, `mssqlclient`) · `fping` · `dnSpy`
+`nmap` · `netcat` · `whatweb` · `Wireshark` · `Burp Suite` · `Splunk` · `ELK Stack` · `Sysmon` · `Winlogbeat` · `Wazuh` · `Suricata` · `Snort` · `Hydra` · `Mimikatz` · `PowerShell` · `Metasploit` · `pkexec` · `ssh-keygen` · `crackmapexec` · `smbclient` · `xfreerdp` · `onesixtyone` · `snmpwalk` · `mysql` · `curl` · `hashcat` · `Proxmox VE` · `Terraform` · `Ansible` · `Responder` · `Inveigh` · `Impacket` (`secretsdump`, `psexec`, `mssqlclient`) · `fping` · `dnSpy` · `enum4linux-ng` · `smbmap` · `rpcclient` · `rclone` · `evil-winrm`
 
 ---
 
